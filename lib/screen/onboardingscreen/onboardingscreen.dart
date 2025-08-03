@@ -14,7 +14,7 @@ class OnBoardingScreen extends StatelessWidget {
           children: [
             Image.asset("assets/images/image 1.png"),
             SizedBox(height: 20),
-            UiHelper.CustomText(
+            UiHelper.customText(
               text: "Welcome to WhatsApp",
               height: 20,
               color: Colors.black,
@@ -23,13 +23,13 @@ class OnBoardingScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                UiHelper.CustomText(text: "Read out", height: 14),
-                UiHelper.CustomText(
+                UiHelper.customText(text: "Read out", height: 14),
+                UiHelper.customText(
                   text: " Privacy Policy.",
                   height: 14,
                   color: Color(0XFF0C42CC),
                 ),
-                UiHelper.CustomText(
+                UiHelper.customText(
                   text: "Tap ''Agree and Continue''",
                   height: 14,
                 ),
@@ -39,8 +39,8 @@ class OnBoardingScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                UiHelper.CustomText(text: "to accept the", height: 14),
-                UiHelper.CustomText(
+                UiHelper.customText(text: "to accept the", height: 14),
+                UiHelper.customText(
                   text: " Teams of Service.",
                   height: 14,
                   color: Color(0XFF0C42CC),

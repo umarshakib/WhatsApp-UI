@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image.asset("assets/images/whatsapp1.png"),
             SizedBox(height: 20),
-            UiHelper.CustomText(
+            UiHelper.customText(
               text: "WhatsApp",
               height: 18,
               fontweight: FontWeight.bold,
