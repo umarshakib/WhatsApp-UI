@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/screen/otp/otpscreen.dart';
 import 'package:whatsapp_clone/widgets/uihelper.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -29,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
               fontweight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 40),
           UiHelper.customText(
             text: "WhatsApp will need to verify your phone",
             height: 16,
@@ -113,10 +114,30 @@ class _LoginScreenState extends State<LoginScreen> {
         ],
       ),
       floatingActionButton: UiHelper.customButton(
-        callBack: () {},
+        callBack: () {
+          login(phonecontroller.text.toString());
+        },
         buttonName: "Next",
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
+  }
+
+  login(String phonenumber) {
+    if (phonenumber == "") {
+      return ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Please enter your phone number"),
+          backgroundColor: Color(0XFF00A884),
+        ),
+      );
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => OtpScreen(yourphonenumber: phonenumber),
+        ),
+      );
+    }
   }
 }
